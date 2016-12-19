@@ -1,0 +1,23 @@
+<!doctype html>
+<html class="no-js" {{site.language_attributes}}> <!--<![endif]-->
+<head>
+    <meta charset="{{site.charset}}" />
+        <title>   
+            {% if wp_title %}
+                {{ wp_title }} - {{ site.name }}
+            {% else %}
+                {{ site.name }}
+            {% endif %}
+        </title>
+    <meta name="description" content="{{site.description}}">
+    <link rel="stylesheet" type="text/css" href="{{function('get_template_directory_uri')}}/css/vendors.css"/>
+    <link rel="stylesheet" href="{{function('get_template_directory_uri')}}/style.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="unitpay-verification" content="f9cf9ae3220a49d08fc3d463c58020" />
+    <link rel="pingback" href="{{site.pingback_url}}" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,600&amp;subset=cyrillic" rel="stylesheet">
+
+    {{function('wp_head')}}

@@ -1,0 +1,27 @@
+{% include 'a-common/header/html-header.twig' %}
+	{% block head %}
+	{% endblock %}
+</head>
+
+<body class="base">
+	<div class="base__header">
+		{# include 'a-common/header/header.twig'#}
+	</div>
+	
+	<div class="base__content">
+		{# block content#}
+
+		{# endblock#}
+	</div>
+	
+	<div class="base__footer">
+		{# include 'footer/footer.twig'#}
+		{{ function('wp_footer') }}
+		{# include 'footer/footer-scripts.twig'#}
+	</div>
+
+	{# block notinstructure #}
+	
+	{# endblock #}
+</body>
+</html>

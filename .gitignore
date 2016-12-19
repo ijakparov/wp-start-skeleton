@@ -1,0 +1,16 @@
+/shared
+/local-config.php
+/sql-dump-*.sql
+/db-sync
+.DS_Store
+/wp
+.sass-cache
+node_modules
+bower_components
+/content/uploads/*
+!/content/uploads/ithemes-security
+/.htaccess
+/simple-backup
+/*.sublime-project
+/*.sublime-workspace
+
