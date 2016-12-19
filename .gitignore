@@ -7,6 +7,10 @@
 .sass-cache
 node_modules
 bower_components
+<<<<<<< HEAD
+=======
+/wp-config.php
+>>>>>>> 5366d27f1fc623a5263468e20de5fb31ab99c00f
 /content/uploads/*
 !/content/uploads/ithemes-security
 /.htaccess
