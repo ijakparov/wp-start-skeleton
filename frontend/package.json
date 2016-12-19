@@ -1,0 +1,50 @@
+{
+  "name": "erotist",
+  "version": "1.0.0",
+  "devDependencies": {
+    "async": "^2.0.1",
+    "browserify": "^13.1.0",
+    "compass-importer": "^0.4.1",
+    "compass-mixins": "^0.12.10",
+    "del": "^2.2.1",
+    "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-clean-css": "^2.0.12",
+    "gulp-compass": "^2.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-csso": "^2.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-imagemin": "^3.0.2",
+    "gulp-load-plugins": "~0.5.1",
+    "gulp-minify": "0.0.14",
+    "gulp-order": "^1.1.1",
+    "gulp-rename": "~1.2.0",
+    "gulp-ruby-sass": "^2.0.6",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "gulp-watch": "^4.3.9",
+    "gulp.spritesmith": "^6.2.1",
+    "imagemin-gifsicle": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-optipng": "^5.2.0",
+    "imagemin-pngquant": "^5.0.0",
+    "main-bower-files": "^2.13.1",
+    "tapable": "^0.2.4",
+    "webpack-stream": "^3.2.0"
+  },
+  "description": "The \"_s\" for Timber: a dead-simple theme that you can build from. The primary purpose of this theme is to provide a file structure rather than a framework for markup or styles. Configure your Sass, scripts, and task runners however you would like!",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ildar Jakparov",
+  "license": "ISC"
+}

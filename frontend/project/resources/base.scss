@@ -1,0 +1,51 @@
+@import "compass/reset";
+@import "compass/css3";
+@import "bootstrap-breakpoint";
+@import "my-helpers";
+@import "sprite";
+
+html,body{
+	font-family: "Roboto";
+	background: #fff;
+}
+div{
+	position: relative;
+}
+
+.clear{
+	clear:both;
+}
+.row-eq-height {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+
+	&--hidden-sm{
+		display: block;
+
+		@include breakpoint(md){
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display:         flex;
+		}
+	}
+	&--hidden-xs{
+		display: block;
+
+		@include breakpoint(sm){
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display:         flex;
+		}
+	}
+}
+
+.base{
+	&__header{
+		margin-bottom: 40px;
+	}
+	
+}
