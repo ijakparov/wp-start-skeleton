@@ -24,7 +24,8 @@ var gulp = require('gulp'),
 	pngquant = require('imagemin-pngquant'),
 	webpack = require('webpack-stream'),
 	cleanCSS = require('gulp-clean-css'),
-	del          = require('del');
+	del          = require('del'),
+    imageminJpegRecompress = require('imagemin-jpeg-recompress');
 
 
 // Define default destination folder
@@ -77,6 +78,14 @@ gulp.task('fonts', function() {
 gulp.task('sprite', function() {
     var spriteData = 
         gulp.src(path.src.sprites) // путь, откуда берем картинки для спрайта
+        .pipe(imagemin([
+            pngquant()
+
+            ],
+            {
+                verbose:true
+            }
+            ))
             .pipe(spritesmith({
                 imgName: 'sprite.png',
                 cssName: '_sprite.scss',
@@ -227,14 +236,23 @@ gulp.task('css-admin', function() {
 
 gulp.task('img', function() {
     return gulp.src(path.src.images) // Берем все изображения из app
-        .pipe(imagemin({ // Сжимаем их с наилучшими настройками
-            interlaced: true,
-            progressive: true,
-            svgoPlugins: [{removeViewBox: false}],
-            use: [pngquant()]
-        }))
+        .pipe(imagemin([
+            pngquant(),
+            imageminJpegRecompress({
+                loops:4,
+                min: 50,
+                max: 95,
+                quality:'high' 
+            }),
+
+            ],
+            {
+                verbose:true
+            }
+        ))
         .pipe(gulp.dest(path.build.img)); // Выгружаем на продакшен
 });
+
 
 gulp.task('build', [
     'fonts',
