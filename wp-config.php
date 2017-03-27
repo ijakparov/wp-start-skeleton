@@ -1,4 +1,6 @@
 <?php
+
+define( 'DISALLOW_FILE_EDIT', true );
 // ===================================================
 // Load database info and local development parameters
 // ===================================================
@@ -50,6 +52,13 @@ $table_prefix  = 'wp_';
 // Leave blank for American English
 // ================================
 define( 'WPLANG', '' );
+
+
+//disable WP Post Revisions
+define('AUTOSAVE_INTERVAL', 300); // seconds
+define('WP_POST_REVISIONS', false);
+//define('WP_POST_REVISIONS', 3);
+
 
 // ===========
 // Hide errors
